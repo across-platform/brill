@@ -5,7 +5,7 @@ if (toggle && nav) {
   toggle.addEventListener("click", () => {
     const isOpen = document.body.classList.toggle("nav-open");
     toggle.setAttribute("aria-expanded", String(isOpen));
-      toggle.setAttribute("aria-label", isOpen ? "Menü bezárása" : "Menü megnyitása");
+    toggle.setAttribute("aria-label", isOpen ? "Menü bezárása" : "Menü megnyitása");
   });
 
   nav.addEventListener("click", (event) => {
