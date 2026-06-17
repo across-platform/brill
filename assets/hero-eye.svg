@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 720" role="img" aria-labelledby="title desc">
+  <title id="title">Elegáns szem és szempilla illusztráció</title>
+  <desc id="desc">Puha rózsaszín háttéren modern közeli szem illusztráció hosszú pillákkal.</desc>
+  <defs>
+    <linearGradient id="skin" x1="0" x2="1" y1="0.1" y2="0.9">
+      <stop offset="0" stop-color="#fff6ef"/>
+      <stop offset="0.45" stop-color="#f5cdbd"/>
+      <stop offset="1" stop-color="#df9d86"/>
+    </linearGradient>
+    <radialGradient id="iris" cx="50%" cy="46%" r="55%">
+      <stop offset="0" stop-color="#f1c48a"/>
+      <stop offset="0.45" stop-color="#986142"/>
+      <stop offset="0.82" stop-color="#38261f"/>
+      <stop offset="1" stop-color="#1a1110"/>
+    </radialGradient>
+    <radialGradient id="glow" cx="25%" cy="20%" r="75%">
+      <stop offset="0" stop-color="#fffaf6" stop-opacity=".85"/>
+      <stop offset=".58" stop-color="#fff2eb" stop-opacity=".18"/>
+      <stop offset="1" stop-color="#e7a28b" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="soft" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="8"/>
+    </filter>
+  </defs>
+  <rect width="960" height="720" fill="url(#skin)"/>
+  <circle cx="820" cy="118" r="220" fill="url(#glow)"/>
+  <circle cx="172" cy="610" r="260" fill="#fff7f1" opacity=".42"/>
+  <path d="M54 473c92-211 272-330 487-307 148 16 260 96 348 206-148 101-301 132-460 95-152-35-261-32-375 6Z" fill="#fffaf8" opacity=".85"/>
+  <path d="M104 408c98-137 245-201 403-187 126 11 237 68 330 167-121 70-250 96-393 72-122-20-221-15-340 48" fill="#fffefc"/>
+  <path d="M82 421c132-155 284-219 467-190 108 17 205 65 306 145" fill="none" stroke="#4a211d" stroke-width="18" stroke-linecap="round"/>
+  <path d="M85 511c147-64 282-73 433-41 112 24 213 5 323-63" fill="none" stroke="#5b2b25" stroke-width="10" stroke-linecap="round" opacity=".55"/>
+  <ellipse cx="495" cy="369" rx="105" ry="118" fill="url(#iris)"/>
+  <circle cx="495" cy="369" r="48" fill="#1a1110"/>
+  <circle cx="460" cy="321" r="24" fill="#fff" opacity=".88"/>
+  <circle cx="523" cy="401" r="10" fill="#fff" opacity=".5"/>
+  <path d="M150 300c133-98 333-132 539-55" fill="none" stroke="#7b463d" stroke-width="28" stroke-linecap="round" opacity=".44" filter="url(#soft)"/>
+  <path d="M153 285c139-91 335-111 532-48" fill="none" stroke="#5a302a" stroke-width="18" stroke-linecap="round"/>
+  <g fill="none" stroke="#1d1312" stroke-linecap="round">
+    <path d="M132 399c-25-49-45-83-75-119" stroke-width="5"/>
+    <path d="M169 371c-18-54-34-91-60-132" stroke-width="5"/>
+    <path d="M211 343c-14-56-22-98-46-144" stroke-width="5"/>
+    <path d="M259 319c-9-63-12-102-30-151" stroke-width="6"/>
+    <path d="M315 303c-2-65 4-106-9-158" stroke-width="6"/>
+    <path d="M377 292c6-64 17-104 12-158" stroke-width="7"/>
+    <path d="M446 289c13-66 29-104 28-158" stroke-width="7"/>
+    <path d="M520 296c20-62 42-101 50-151" stroke-width="7"/>
+    <path d="M592 314c29-57 55-91 66-141" stroke-width="7"/>
+    <path d="M662 343c36-48 69-82 87-127" stroke-width="6"/>
+    <path d="M728 381c44-38 80-66 105-105" stroke-width="6"/>
+    <path d="M774 424c50-25 90-45 121-77" stroke-width="5"/>
+  </g>
+  <path d="M654 114c-124-32-246-33-366 3" fill="none" stroke="#42251f" stroke-width="24" stroke-linecap="round"/>
+  <path d="M670 100c-126-47-264-48-401-5" fill="none" stroke="#876056" stroke-width="14" stroke-linecap="round" opacity=".55"/>
+  <g opacity=".62" fill="none" stroke="#ffffff" stroke-width="3">
+    <path d="M779 546c32-36 51-74 55-113"/>
+    <path d="M823 518c22 5 44 3 66-8"/>
+    <path d="M837 472c20-11 36-27 48-48"/>
+  </g>
+</svg>

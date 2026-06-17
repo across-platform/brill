@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 520" role="img" aria-labelledby="title desc">
+  <title id="title">Eszti stilizált portréja</title>
+  <desc id="desc">Modern szépségszalon hangulatú, stilizált portré illusztráció.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#f9d9ca"/>
+      <stop offset=".55" stop-color="#fff8f3"/>
+      <stop offset="1" stop-color="#d98d76"/>
+    </linearGradient>
+    <linearGradient id="jacket" x1=".1" x2=".9" y1="0" y2="1">
+      <stop offset="0" stop-color="#fff0e8"/>
+      <stop offset="1" stop-color="#e6a692"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="520" rx="34" fill="url(#bg)"/>
+  <circle cx="492" cy="118" r="118" fill="#fff" opacity=".34"/>
+  <path d="M82 440c59-104 132-145 227-145h39c95 0 168 41 227 145v80H82Z" fill="url(#jacket)"/>
+  <path d="M214 314c17 71 58 112 116 112s99-41 116-112c-22 11-48 17-77 17h-138c-11 0-22-1-31-3Z" fill="#f2bea5"/>
+  <path d="M191 195c-12-84 49-156 141-156 87 0 146 63 146 153 0 109-63 202-154 202-76 0-133-63-133-199Z" fill="#f4c4ad"/>
+  <path d="M176 241c-31-125 39-213 140-222 105-9 192 61 190 172-42-50-100-74-174-73-67 1-118 25-156 123Z" fill="#41241f"/>
+  <path d="M176 246c6-82 50-129 128-145 54-11 116-1 179 34-12-67-69-107-146-108-88-1-152 60-161 166Z" fill="#5d3029"/>
+  <path d="M236 230c28-16 58-15 87 1" fill="none" stroke="#51302a" stroke-width="9" stroke-linecap="round"/>
+  <path d="M363 230c29-16 59-15 88 1" fill="none" stroke="#51302a" stroke-width="9" stroke-linecap="round"/>
+  <path d="M265 267c23 14 46 14 70 0" fill="none" stroke="#221615" stroke-width="7" stroke-linecap="round"/>
+  <path d="M387 267c22 14 44 14 66 0" fill="none" stroke="#221615" stroke-width="7" stroke-linecap="round"/>
+  <path d="M353 262c-3 37-2 58 6 66" fill="none" stroke="#c9806e" stroke-width="7" stroke-linecap="round"/>
+  <path d="M287 348c35 28 75 28 119 0" fill="none" stroke="#9d5d55" stroke-width="8" stroke-linecap="round"/>
+  <path d="M243 375c-36-9-62-35-81-77" fill="none" stroke="#3c221e" stroke-width="18" stroke-linecap="round"/>
+  <path d="M444 376c36-12 60-40 75-84" fill="none" stroke="#3c221e" stroke-width="18" stroke-linecap="round"/>
+  <path d="M231 422l-44 98h262l-52-98c-42 35-87 53-136 53-36 0-56-17-30-53Z" fill="#fff8f4" opacity=".75"/>
+  <g fill="none" stroke="#7f4a40" stroke-width="5" opacity=".38">
+    <path d="M88 172c36-36 68-43 95-21"/>
+    <path d="M84 202c35-18 66-19 93-1"/>
+    <path d="M500 385c37-18 66-19 88-5"/>
+  </g>
+</svg>
