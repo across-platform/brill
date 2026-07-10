@@ -15,6 +15,20 @@
             "alt": "3D volume szempilla szett közeli képe"
         }
     ],
+    "gallery": [
+        {
+            "image": "assets/services/2d-volume.png",
+            "alt": "Finom 2D styling közeli képe"
+        },
+        {
+            "image": "assets/services/3d-volume.png",
+            "alt": "Elegáns volume eredmény"
+        },
+        {
+            "image": "assets/services/classic.png",
+            "alt": "Természetes hatású styling"
+        }
+    ],
     "price_groups": [
         {
             "title": "Műszempilla",
@@ -45,7 +59,7 @@
                 },
                 {
                     "name": "Színes szempilla",
-                    "price": "1 500 Ft"
+                    "price": "2 000 Ft"
                 },
                 {
                     "name": "Műszempilla leoldás",
@@ -71,7 +85,7 @@
             ]
         },
         {
-            "title": "Szemöldök és gyanta",
+            "title": "Szemöldök styling",
             "items": [
                 {
                     "name": "Szemöldök laminálás festéssel",
