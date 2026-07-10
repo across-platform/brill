@@ -38,9 +38,9 @@
         <span></span>
       </button>
       <nav class="main-nav" aria-label="Főmenü">
+        <a href="#rolam">Rólam</a>
         <a href="#bepillantas">Bepillantás</a>
         <a href="#szolgaltatasok">Szolgáltatások</a>
-        <a href="#rolam">Rólam</a>
         <a href="#galeria">Galéria</a>
         <a href="#velemenyek">Vélemények</a>
         <a href="#kapcsolat">Kapcsolat</a>
