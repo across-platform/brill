@@ -12,6 +12,9 @@ const scrollHomeToTop = () => {
   }
 };
 
+scrollHomeToTop();
+requestAnimationFrame(scrollHomeToTop);
+setTimeout(scrollHomeToTop, 0);
 window.addEventListener("load", scrollHomeToTop);
 window.addEventListener("pageshow", scrollHomeToTop);
 
@@ -42,4 +45,31 @@ if (toggle && nav) {
       toggle.setAttribute("aria-label", "Menü megnyitása");
     }
   });
+}
+
+const motionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+const revealItems = document.querySelectorAll(
+  "section:not(.hero), .service-card, .price-group, .benefit-card, .testimonial-grid figure, .gallery-tile, .accordion"
+);
+
+if (motionQuery.matches) {
+  revealItems.forEach((item) => item.classList.add("is-visible"));
+} else if ("IntersectionObserver" in window) {
+  revealItems.forEach((item) => item.classList.add("revealable"));
+
+  const revealObserver = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) {
+          return;
+        }
+
+        entry.target.classList.add("is-visible");
+        observer.unobserve(entry.target);
+      });
+    },
+    { rootMargin: "0px 0px -10% 0px", threshold: 0.12 }
+  );
+
+  revealItems.forEach((item) => revealObserver.observe(item));
 }

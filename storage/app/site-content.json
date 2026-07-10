@@ -1,0 +1,157 @@
+{
+    "services": [
+        {
+            "title": "2D volume",
+            "description": "Könnyedebb dúsítás, elegáns mindennapi viselethez.",
+            "price": "14 000 Ft",
+            "image": "assets/services/2d-volume.png",
+            "alt": "2D volume szempilla szett közeli képe"
+        },
+        {
+            "title": "3D volume",
+            "description": "Látványosabb, mégis finom hatás azoknak, akik szeretik a hangsúlyt.",
+            "price": "16 000 Ft",
+            "image": "assets/services/3d-volume.png",
+            "alt": "3D volume szempilla szett közeli képe"
+        }
+    ],
+    "price_groups": [
+        {
+            "title": "Műszempilla",
+            "items": [
+                {
+                    "name": "2D műszempilla építés",
+                    "price": "14 000 Ft"
+                },
+                {
+                    "name": "2D műszempilla töltés (21 napig)",
+                    "price": "11 000 Ft"
+                },
+                {
+                    "name": "3D-4D műszempilla építés",
+                    "price": "16 000 Ft"
+                },
+                {
+                    "name": "3D-4D műszempilla töltés (21 napig)",
+                    "price": "13 000 Ft"
+                },
+                {
+                    "name": "5D-6D műszempilla építés",
+                    "price": "18 000 Ft"
+                },
+                {
+                    "name": "5D-6D műszempilla töltés (21 napig)",
+                    "price": "15 000 Ft"
+                },
+                {
+                    "name": "Színes szempilla",
+                    "price": "1 500 Ft"
+                },
+                {
+                    "name": "Műszempilla leoldás",
+                    "price": "3 000 Ft"
+                }
+            ]
+        },
+        {
+            "title": "Lifting és festés",
+            "items": [
+                {
+                    "name": "Szempilla lifting festéssel",
+                    "price": "11 000 Ft"
+                },
+                {
+                    "name": "Szempilla lifting festés nélkül",
+                    "price": "10 000 Ft"
+                },
+                {
+                    "name": "Szempilla festés",
+                    "price": "2 500 Ft"
+                }
+            ]
+        },
+        {
+            "title": "Szemöldök és gyanta",
+            "items": [
+                {
+                    "name": "Szemöldök laminálás festéssel",
+                    "price": "12 000 Ft"
+                },
+                {
+                    "name": "Szemöldök laminálás festés nélkül",
+                    "price": "11 000 Ft"
+                },
+                {
+                    "name": "Szemöldök szedés csipesszel",
+                    "price": "2 000 Ft"
+                },
+                {
+                    "name": "Szemöldök szedés gyantával",
+                    "price": "2 500 Ft"
+                },
+                {
+                    "name": "Szemöldök festés",
+                    "price": "2 500 Ft"
+                },
+                {
+                    "name": "Bajusz gyanta",
+                    "price": "2 500 Ft"
+                }
+            ]
+        }
+    ],
+    "benefits": [
+        {
+            "title": "Egyedi styling",
+            "description": "A formát a szemformádhoz, stílusodhoz és természetes adottságaidhoz igazítom."
+        },
+        {
+            "title": "Prémium anyagok",
+            "description": "Gondosan válogatott, professzionális termékekkel dolgozom a tartós és kényelmes viseletért."
+        },
+        {
+            "title": "Folyamatos fejlődés",
+            "description": "2018 óta képzem magam, hogy mindig naprakész technikákkal dolgozhassak."
+        },
+        {
+            "title": "Nyugodt környezet",
+            "description": "Az itt töltött idő nem csak szépülés, hanem egy kis kikapcsolódás is."
+        }
+    ],
+    "testimonials": [
+        {
+            "quote": "Gyönyörű, természetes hatás. Pont olyan lett, amilyet szerettem volna.",
+            "name": "Laura"
+        },
+        {
+            "quote": "Nagyon precíz munka és kellemes hangulat. A pilláim hetekig szépek maradtak.",
+            "name": "Niki"
+        },
+        {
+            "quote": "Eszti kedves, figyelmes, és minden alkalommal rám szabja a szettet.",
+            "name": "Dóri"
+        }
+    ],
+    "faq": [
+        {
+            "question": "Fáj a szempillaépítés?",
+            "answer": "Nem, a kezelés fájdalommentes. A legtöbb vendég számára inkább pihentető élmény."
+        },
+        {
+            "question": "Mennyi ideig tart egy új építés?",
+            "answer": "A választott technikától függően általában 2-3 órát vesz igénybe."
+        },
+        {
+            "question": "Mikor szükséges a töltés?",
+            "answer": "Általában 3 hetente ajánlott, hogy a szett szép és egyenletes maradjon."
+        },
+        {
+            "question": "Sminkelhetem a pilláimat?",
+            "answer": "A tökéletes eredmény elérése érdekében kérlek, hogy smink nélkül érkezz."
+        },
+        {
+            "question": "Előfordulhat allergiás reakció?",
+            "answer": "Ritkán igen. Ez egyéni érzékenységtől függ, ezért minden fontos tudnivalót átbeszélünk a kezelés előtt."
+        }
+    ]
+}

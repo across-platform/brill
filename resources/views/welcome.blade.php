@@ -8,7 +8,24 @@
       name="description"
       content="Brill Lash and Beauty - modern, természetes hatású szempilla szolgáltatások Esztitől. Időpontfoglalás Instagramon: @brill_lash_and_beauty."
     />
-    <link rel="stylesheet" href="styles.css?v=20260618-1012" />
+    <script>
+      (() => {
+        if ("scrollRestoration" in history) {
+          history.scrollRestoration = "manual";
+        }
+
+        const navigation = performance.getEntriesByType("navigation")[0];
+        if (navigation?.type === "reload" && window.location.hash) {
+          history.replaceState(null, "", `${window.location.pathname}${window.location.search}`);
+        }
+
+        window.scrollTo(0, 0);
+      })();
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800;900&display=swap" rel="stylesheet" />
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
   </head>
   <body>
     <header class="site-header">
@@ -21,6 +38,7 @@
         <span></span>
       </button>
       <nav class="main-nav" aria-label="Főmenü">
+        <a href="#bepillantas">Bepillantás</a>
         <a href="#szolgaltatasok">Szolgáltatások</a>
         <a href="#rolam">Rólam</a>
         <a href="#galeria">Galéria</a>
@@ -28,7 +46,7 @@
         <a href="#kapcsolat">Kapcsolat</a>
       </nav>
       <a class="header-cta" href="https://www.instagram.com/brill_lash_and_beauty/" target="_blank" rel="noreferrer">
-        Időpontfoglalás
+        Instagramon foglalok
       </a>
     </header>
 
@@ -42,7 +60,7 @@
           </p>
           <div class="hero-actions">
             <a class="button primary" href="https://www.instagram.com/brill_lash_and_beauty/" target="_blank" rel="noreferrer">
-              Foglalok időpontot
+              Instagramon foglalok
             </a>
             <a class="button ghost" href="#szolgaltatasok">Megnézem a szolgáltatásokat</a>
           </div>
@@ -61,69 +79,70 @@
             </div>
           </dl>
         </div>
-        <img class="hero-photo" src="assets/hero-eye-photo.png?v=20260617-2007" alt="Közeli szem dús, elegáns szempillákkal" />
+        <img class="hero-photo" src="{{ asset('assets/hero-eye-photo.png') }}" alt="Közeli szem dús, elegáns szempillákkal" />
       </section>
 
       <section class="about section-band" id="rolam">
         <div class="about-image">
-          <img src="assets/eszti-portrait.svg" alt="Eszti, a Brill Lash and Beauty tulajdonosa" />
+          <img src="{{ asset('assets/intro.jpg') }}" alt="Árendás Eszter, a Brill Lash and Beauty tulajdonosa" />
         </div>
         <div class="section-copy">
           <p class="eyebrow">Rólam</p>
           <h2>Árendás Eszter vagyok</h2>
           <p>
-            Árendás Eszter vagyok, sminkes és szempilla stylist. 2018 óta foglalkozom szempillaépítéssel, és azóta is
-            folyamatosan képzem magam, hogy vendégeim számára igényes, tartós és személyre szabott szolgáltatást
-            nyújthassak.
+            Sminkesként és szempilla stylistként 2018 óta dolgozom azon, hogy vendégeim igényes, tartós és harmonikus
+            eredménnyel távozzanak. Fontos számomra a precizitás, a nyugodt hangulat és az, hogy minden elkészült
+            munka természetesen illeszkedjen a viselőjéhez.
           </p>
           <p>
-            Hiszem, hogy a tökéletes szempilla nem csupán szép, hanem harmonikusan illeszkedik az arc karakteréhez, a
-            szemformához és a vendég életstílusához. Minden szettet egyedileg, az elképzeléseidhez és adottságaidhoz
-            igazítok.
+            Hiszem, hogy a tökéletes végeredmény nem csupán látványos, hanem harmonikusan illeszkedik az arc
+            karakteréhez, a szemformához és a vendég életstílusához.
           </p>
           <a class="text-link" href="https://www.instagram.com/brill_lash_and_beauty/" target="_blank" rel="noreferrer">
             @brill_lash_and_beauty
           </a>
         </div>
-        <img class="lash-mark" src="assets/lash-mark.svg" alt="" />
+        <img class="lash-mark" src="{{ asset('assets/lash-mark.svg') }}" alt="" />
       </section>
 
-      <section class="services" id="szolgaltatasok">
+      <section class="services" id="bepillantas">
         <div class="section-heading">
-          <p class="eyebrow">Szolgáltatások</p>
+          <p class="eyebrow">Bepillantás</p>
           <h2>Válassz a kedvenceim közül</h2>
         </div>
         <div class="service-grid">
-          <article class="service-card">
-            <div class="service-art natural"></div>
-            <h3>Classic szett</h3>
-            <p>Letisztult, természetes hatás, ami finoman nyitja a tekintetet.</p>
-            <span>12 900 Ft-tól</span>
-          </article>
-          <article class="service-card">
-            <div class="service-art soft"></div>
-            <h3>2D volume</h3>
-            <p>Könnyedebb dúsítás, elegáns mindennapi viselethez.</p>
-            <span>15 900 Ft-tól</span>
-          </article>
-          <article class="service-card">
-            <div class="service-art bold"></div>
-            <h3>3D volume</h3>
-            <p>Látványosabb, mégis finom hatás azoknak, akik szeretik a hangsúlyt.</p>
-            <span>18 900 Ft-tól</span>
-          </article>
-          <article class="service-card">
-            <div class="service-art fill"></div>
-            <h3>Töltés</h3>
-            <p>A szett frissítése, hogy a forma és a tartósság újra szép legyen.</p>
-            <span>9 900 Ft-tól</span>
-          </article>
-          <article class="service-card">
-            <div class="service-art lift"></div>
-            <h3>Lash lifting</h3>
-            <p>Saját pillák látványos emelése természetes, ápolt eredménnyel.</p>
-            <span>11 900 Ft-tól</span>
-          </article>
+          @foreach ($content['services'] as $service)
+            <article class="service-card">
+              @if (! empty($service['image']))
+                <img class="service-art" src="{{ asset($service['image']) }}" alt="{{ $service['alt'] }}" />
+              @endif
+              <h3>{{ $service['title'] }}</h3>
+              <p>{{ $service['description'] }}</p>
+              <span>{{ $service['price'] }}</span>
+            </article>
+          @endforeach
+        </div>
+      </section>
+
+      <section class="pricing section-band" id="szolgaltatasok">
+        <div class="section-heading">
+          <p class="eyebrow">Szolgáltatások</p>
+          <h2>Árlista</h2>
+        </div>
+        <div class="price-card" aria-label="Brill Lash and Beauty árlista">
+          @foreach ($content['price_groups'] as $group)
+            <div class="price-group">
+              <h3>{{ $group['title'] }}</h3>
+              <dl class="price-list">
+                @foreach ($group['items'] as $item)
+                  <div>
+                    <dt>{{ $item['name'] }}</dt>
+                    <dd>{{ $item['price'] }}</dd>
+                  </div>
+                @endforeach
+              </dl>
+            </div>
+          @endforeach
         </div>
       </section>
 
@@ -133,36 +152,26 @@
           <h2>Finom átalakulások, nagy különbséggel</h2>
         </div>
         <div class="gallery-strip" aria-label="Galéria minták">
-          <div class="gallery-tile tile-one"></div>
-          <div class="gallery-tile tile-two"></div>
-          <div class="gallery-tile tile-three"></div>
-          <div class="gallery-tile tile-four"></div>
-          <div class="gallery-tile tile-five"></div>
+          @foreach ($content['gallery'] as $image)
+            <figure class="gallery-tile">
+              <img src="{{ asset($image['image']) }}" alt="{{ $image['alt'] }}" loading="lazy" />
+            </figure>
+          @endforeach
         </div>
       </section>
 
       <section class="benefits" id="miert-en">
         <div class="section-heading">
-          <p class="eyebrow">Miért engem válassz?</p>
-          <h2>Miért választanak a vendégeim?</h2>
+          <p class="eyebrow">A Brill élmény</p>
+          <h2>A részletekre figyelve készül</h2>
         </div>
         <div class="benefit-grid">
-          <article class="benefit-card">
-            <h3>Személyre szabott styling</h3>
-            <p>Minden szettet a szemformádhoz, stílusodhoz és természetes adottságaidhoz igazítok.</p>
-          </article>
-          <article class="benefit-card">
-            <h3>Prémium anyagok</h3>
-            <p>Gondosan válogatott, professzionális termékekkel dolgozom a tartós és kényelmes viseletért.</p>
-          </article>
-          <article class="benefit-card">
-            <h3>Folyamatos fejlődés</h3>
-            <p>2018 óta képzem magam, hogy mindig naprakész technikákkal dolgozhassak.</p>
-          </article>
-          <article class="benefit-card">
-            <h3>Nyugodt környezet</h3>
-            <p>A kezelés nálam nem csak szépülés, hanem egy kis kikapcsolódás is.</p>
-          </article>
+          @foreach ($content['benefits'] as $benefit)
+            <article class="benefit-card">
+              <h3>{{ $benefit['title'] }}</h3>
+              <p>{{ $benefit['description'] }}</p>
+            </article>
+          @endforeach
         </div>
       </section>
 
@@ -172,18 +181,12 @@
           <h2>Vendégeim mondták</h2>
         </div>
         <div class="testimonial-grid">
-          <figure>
-            <blockquote>Gyönyörű, természetes hatás. Pont olyan lett, amilyet szerettem volna.</blockquote>
-            <figcaption>Laura</figcaption>
-          </figure>
-          <figure>
-            <blockquote>Nagyon precíz munka és kellemes hangulat. A pilláim hetekig szépek maradtak.</blockquote>
-            <figcaption>Niki</figcaption>
-          </figure>
-          <figure>
-            <blockquote>Eszti kedves, figyelmes, és minden alkalommal rám szabja a szettet.</blockquote>
-            <figcaption>Dóri</figcaption>
-          </figure>
+          @foreach ($content['testimonials'] as $testimonial)
+            <figure>
+              <blockquote>{{ $testimonial['quote'] }}</blockquote>
+              <figcaption>{{ $testimonial['name'] }}</figcaption>
+            </figure>
+          @endforeach
         </div>
       </section>
 
@@ -192,18 +195,18 @@
           <p class="eyebrow">Kapcsolat</p>
           <h2>Foglalj időpontot kényelmesen</h2>
           <p>
-            Időpontfoglalásra a weboldalon keresztül vagy Instagram üzenetben van lehetőség. A kezelések alatt teljes
+            Időpontfoglalásra Instagram üzenetben van lehetőség. Munka közben teljes
             figyelmemet a vendégeimre fordítom, ezért előfordulhat, hogy nem tudok azonnal válaszolni. Minden
             megkeresésre a lehető legrövidebb időn belül reagálok.
           </p>
           <ul class="booking-list">
             <li>első alkalommal rövid konzultáció</li>
-            <li>személyre szabott styling ajánlás</li>
+            <li>egyedi styling ajánlás</li>
             <li>elő- és utóápolási tanácsadás</li>
             <li>új vendégeknek 50% előleggel véglegesített időpont</li>
           </ul>
         </div>
-        <img src="assets/lash-mark.svg" alt="" />
+        <img src="{{ asset('assets/lash-mark.svg') }}" alt="" />
         <div class="booking-actions">
           <a class="button primary" href="https://www.instagram.com/brill_lash_and_beauty/" target="_blank" rel="noreferrer">
             Instagramon foglalok
@@ -220,7 +223,7 @@
           <h2>Minden, amit érdemes tudnod foglalás előtt</h2>
         </div>
         <div class="accordion-group">
-          <details class="accordion" open>
+          <details class="accordion">
             <summary>Foglalási feltételek</summary>
             <div class="accordion-panel">
               <p>Az időpont véglegesítése új vendégek esetében 50% előleg befizetésével történik.</p>
@@ -265,29 +268,12 @@
           <details class="accordion" id="gyik">
             <summary>Gyakori kérdések</summary>
             <div class="accordion-panel faq-list">
-              <div>
-                <h3>Fáj a szempillaépítés?</h3>
-                <p>Nem, a kezelés fájdalommentes. A legtöbb vendég számára inkább pihentető élmény.</p>
-              </div>
-              <div>
-                <h3>Mennyi ideig tart egy új szett?</h3>
-                <p>Az új szett típustól függően általában 2-3 órát vesz igénybe.</p>
-              </div>
-              <div>
-                <h3>Mikor szükséges a töltés?</h3>
-                <p>Általában 3 hetente ajánlott, hogy a szett szép és egyenletes maradjon.</p>
-              </div>
-              <div>
-                <h3>Sminkelhetem a pilláimat?</h3>
-                <p>Igen, de olajmentes termékek használata javasolt, és kerülni kell a szempillaspirált.</p>
-              </div>
-              <div>
-                <h3>Előfordulhat allergiás reakció?</h3>
-                <p>
-                  Ritkán igen. Ez egyéni érzékenységtől függ, ezért minden fontos tudnivalót átbeszélünk a kezelés
-                  előtt.
-                </p>
-              </div>
+              @foreach ($content['faq'] as $faq)
+                <div>
+                  <h3>{{ $faq['question'] }}</h3>
+                  <p>{{ $faq['answer'] }}</p>
+                </div>
+              @endforeach
             </div>
           </details>
         </div>
@@ -304,10 +290,8 @@
     </main>
 
     <footer>
-      <p>Brill Lash and Beauty. All rights reserved.</p>
+      <p>Brill Lash and Beauty. Minden jog fenntartva.</p>
       <a href="https://www.instagram.com/brill_lash_and_beauty/" target="_blank" rel="noreferrer">@brill_lash_and_beauty</a>
     </footer>
-
-    <script src="script.js"></script>
   </body>
 </html>
