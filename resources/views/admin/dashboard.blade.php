@@ -109,10 +109,104 @@
         padding: clamp(24px, 5vw, 56px) clamp(18px, 5vw, 72px);
       }
 
-      .section-picker {
+      .admin-guide {
         display: grid;
-        gap: 10px;
-        max-width: 420px;
+        gap: 18px;
+        padding: 22px;
+        border: 1px solid rgba(221, 190, 181, 0.78);
+        border-radius: 18px;
+        background:
+          radial-gradient(circle at 100% 0, rgba(184, 117, 136, 0.12), transparent 42%),
+          rgba(255, 255, 255, 0.82);
+        box-shadow: 0 18px 48px rgba(74, 38, 33, 0.1);
+      }
+
+      .admin-guide h2 {
+        margin-bottom: 4px;
+      }
+
+      .admin-guide p {
+        max-width: 760px;
+        margin-bottom: 0;
+      }
+
+      .quick-sections {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+        gap: 12px;
+      }
+
+      .quick-card {
+        display: grid;
+        min-height: 104px;
+        align-content: start;
+        gap: 8px;
+        padding: 16px;
+        border: 1px solid rgba(221, 190, 181, 0.76);
+        border-radius: 14px;
+        color: var(--ink);
+        background: rgba(255, 250, 246, 0.76);
+        box-shadow: 0 10px 28px rgba(74, 38, 33, 0.06);
+        cursor: pointer;
+        text-align: left;
+        transition: transform 160ms ease, border-color 160ms ease, box-shadow 160ms ease;
+      }
+
+      .quick-card:hover,
+      .quick-card:focus-visible,
+      .quick-card.is-active {
+        border-color: rgba(127, 79, 93, 0.44);
+        box-shadow: 0 16px 36px rgba(74, 38, 33, 0.1);
+        transform: translateY(-2px);
+      }
+
+      .quick-card strong {
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 1.1rem;
+        font-weight: 500;
+      }
+
+      .quick-card span {
+        color: var(--muted);
+        font-size: 0.84rem;
+        font-weight: 650;
+        letter-spacing: 0;
+        text-transform: none;
+      }
+
+      .editor-toolbar {
+        display: flex;
+        align-items: end;
+        justify-content: space-between;
+        gap: 18px;
+        padding: 18px;
+        border: 1px solid rgba(221, 190, 181, 0.72);
+        border-radius: 16px;
+        background: rgba(255, 250, 246, 0.72);
+      }
+
+      .editor-toolbar h2 {
+        margin-bottom: 4px;
+        font-size: 1.35rem;
+      }
+
+      .dirty-pill {
+        display: none;
+        align-items: center;
+        min-height: 36px;
+        padding: 0 12px;
+        border: 1px solid rgba(127, 79, 93, 0.28);
+        border-radius: 999px;
+        color: var(--rose-dark);
+        background: rgba(255, 243, 238, 0.88);
+        font-size: 0.78rem;
+        font-weight: 850;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+      }
+
+      .dirty-pill.is-visible {
+        display: inline-flex;
       }
 
       .error-list {
@@ -151,6 +245,27 @@
 
       .panel-head p {
         margin-bottom: 0;
+      }
+
+      .panel-title-row {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .item-count {
+        display: inline-flex;
+        min-height: 28px;
+        align-items: center;
+        padding: 0 10px;
+        border-radius: 999px;
+        color: var(--rose-dark);
+        background: rgba(255, 243, 238, 0.94);
+        font-size: 0.74rem;
+        font-weight: 850;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
       }
 
       .panel-body,
@@ -233,6 +348,28 @@
         background: rgba(255, 250, 246, 0.72);
       }
 
+      .row,
+      .price-row,
+      .price-group-editor {
+        position: relative;
+      }
+
+      .row::before,
+      .price-row::before {
+        grid-column: 1 / -1;
+        color: var(--rose-dark);
+        content: attr(data-row-label);
+        font-size: 0.76rem;
+        font-weight: 850;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .row:not([data-row-label])::before,
+      .price-row:not([data-row-label])::before {
+        content: "Szerkeszthető sor";
+      }
+
       .row {
         align-items: start;
         grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -281,6 +418,13 @@
         letter-spacing: 0;
       }
 
+      input:focus,
+      textarea:focus,
+      select:focus {
+        outline: 3px solid rgba(184, 117, 136, 0.18);
+        border-color: rgba(127, 79, 93, 0.58);
+      }
+
       textarea {
         min-height: 92px;
         resize: vertical;
@@ -314,6 +458,25 @@
         box-shadow: none;
       }
 
+      button.quick-card {
+        display: grid;
+        min-height: 104px;
+        align-content: start;
+        justify-content: stretch;
+        gap: 8px;
+        padding: 16px;
+        border: 1px solid rgba(221, 190, 181, 0.76);
+        border-radius: 14px;
+        color: var(--ink);
+        background: rgba(255, 250, 246, 0.76);
+        box-shadow: 0 10px 28px rgba(74, 38, 33, 0.06);
+        font-size: 1rem;
+        font-weight: 400;
+        letter-spacing: 0;
+        text-align: left;
+        text-transform: none;
+      }
+
       button.danger {
         color: #7f4343;
         border: 1px solid rgba(127, 67, 67, 0.34);
@@ -342,6 +505,7 @@
       }
 
       .backup-item {
+        position: relative;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -360,6 +524,57 @@
       .backup-item span {
         color: var(--muted);
         font-size: 0.86rem;
+      }
+
+      .backup-meta {
+        display: grid;
+        gap: 4px;
+      }
+
+      .backup-help {
+        color: var(--rose-dark);
+        font-size: 0.78rem;
+        font-weight: 800;
+      }
+
+      .backup-popover {
+        position: absolute;
+        z-index: 30;
+        bottom: calc(100% + 10px);
+        left: 12px;
+        width: min(390px, calc(100vw - 48px));
+        padding: 16px;
+        border: 1px solid rgba(234, 213, 205, 0.94);
+        border-radius: 12px;
+        background: #fff;
+        box-shadow: var(--shadow);
+        opacity: 0;
+        pointer-events: none;
+        transform: translateY(6px);
+        transition: opacity 160ms ease, transform 160ms ease;
+      }
+
+      .backup-item:hover .backup-popover,
+      .backup-item:focus-within .backup-popover {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .backup-popover strong {
+        margin-bottom: 8px;
+        color: var(--ink);
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 1.08rem;
+        font-weight: 500;
+      }
+
+      .backup-popover ul {
+        display: grid;
+        gap: 7px;
+        padding-left: 18px;
+        margin: 0;
+        color: var(--muted);
+        font-size: 0.9rem;
       }
 
       .preview-wrap {
@@ -423,9 +638,17 @@
         position: sticky;
         bottom: 0;
         display: flex;
-        justify-content: flex-end;
+        align-items: center;
+        justify-content: space-between;
+        gap: 14px;
         padding: 18px 0 0;
         background: linear-gradient(180deg, rgba(255, 250, 246, 0), var(--paper) 42%);
+      }
+
+      .save-hint {
+        color: var(--muted);
+        font-size: 0.88rem;
+        font-weight: 700;
       }
 
       template {
@@ -435,9 +658,19 @@
       @media (max-width: 760px) {
         header,
         .header-actions,
-        .panel-head {
+        .panel-head,
+        .editor-toolbar,
+        .save-bar {
           align-items: flex-start;
           flex-direction: column;
+        }
+
+        .quick-sections {
+          grid-template-columns: 1fr;
+        }
+
+        .quick-card {
+          min-height: 0;
         }
 
         .row,
@@ -445,6 +678,24 @@
         .image-route-tools,
         .backup-item {
           grid-template-columns: 1fr;
+        }
+
+        .panel-head,
+        .panel-body {
+          padding-right: 16px;
+          padding-left: 16px;
+        }
+
+        .panel-actions,
+        .row-actions,
+        .save-bar button {
+          width: 100%;
+        }
+
+        .panel-actions button,
+        .row-actions button,
+        .save-bar button {
+          width: 100%;
         }
 
         .backup-item {
@@ -456,8 +707,8 @@
   <body>
     <header>
       <div>
-        <h1>Brill Admin</h1>
-        <p class="subtitle">Rejtett tartalom- és árlista szerkesztő</p>
+        <h1>Brill szerkesztő</h1>
+        <p class="subtitle">Egyszerű tartalomkezelő a weboldal frissítéséhez</p>
       </div>
       <div class="header-actions">
         <a class="button secondary" href="{{ route('home') }}" target="_blank" rel="noreferrer">Weboldal megtekintése</a>
@@ -484,18 +735,50 @@
         </div>
       @endif
 
-      <label class="section-picker">
-        Szekció kiválasztása
-        <select id="sectionPicker" aria-label="Szerkesztendő szekció kiválasztása">
-          <option value="services">Szolgáltatások</option>
-          <option value="gallery">Galéria</option>
-          <option value="prices">Árlista</option>
-          <option value="benefits">Előnyök</option>
-          <option value="testimonials">Vélemények</option>
-          <option value="faq">GYIK</option>
-          <option value="backups">Legutóbbi mentések</option>
-        </select>
-      </label>
+      <section class="admin-guide" aria-label="Admin kezdő segítség">
+        <div>
+          <h2>Mit szeretnél módosítani?</h2>
+          <p class="hint">Válassz egy blokkot, írd át a szöveget vagy az árat, majd alul nyomd meg a Mentés gombot. A weboldal csak mentés után frissül.</p>
+        </div>
+        <div class="quick-sections" aria-label="Gyors szekció választó">
+          <button class="quick-card is-active" type="button" data-section-shortcut="services">
+            <strong>Szolgáltatások</strong>
+            <span>Kártyák, képek és kezdő árak.</span>
+          </button>
+          <button class="quick-card" type="button" data-section-shortcut="prices">
+            <strong>Árlista</strong>
+            <span>Árcsoportok és szolgáltatás sorok.</span>
+          </button>
+          <button class="quick-card" type="button" data-section-shortcut="gallery">
+            <strong>Galéria</strong>
+            <span>Képek és leíró szövegek.</span>
+          </button>
+          <button class="quick-card" type="button" data-section-shortcut="faq">
+            <strong>GYIK</strong>
+            <span>Kérdések és rövid válaszok.</span>
+          </button>
+          <button class="quick-card" type="button" data-section-shortcut="benefits">
+            <strong>Előnyök</strong>
+            <span>Bizalmi üzenetek a főoldalon.</span>
+          </button>
+          <button class="quick-card" type="button" data-section-shortcut="testimonials">
+            <strong>Vélemények</strong>
+            <span>Vendégvélemények és helyőrzők.</span>
+          </button>
+          <button class="quick-card" type="button" data-section-shortcut="backups">
+            <strong>Mentések</strong>
+            <span>Korábbi állapot visszaállítása.</span>
+          </button>
+        </div>
+      </section>
+
+      <div class="editor-toolbar">
+        <div>
+          <h2 id="currentSectionTitle">Szolgáltatások szerkesztése</h2>
+          <p class="hint">A fenti gombokkal válthatsz a szerkeszthető részek között.</p>
+        </div>
+        <span class="dirty-pill" id="dirtyPill">Mentetlen módosítás</span>
+      </div>
 
       <form id="contentForm" method="post" action="{{ route('admin.save') }}">
         @csrf
@@ -504,6 +787,7 @@
           <div class="panel-head">
             <div>
               <h2>Szolgáltatások</h2>
+              <span class="item-count" data-count-for="services"></span>
               <p class="hint">Itt módosíthatók a főoldalon megjelenő szolgáltatás kártyák.</p>
             </div>
             <button type="button" data-add="service">Sor hozzáadása</button>
@@ -558,6 +842,7 @@
           <div class="panel-head">
             <div>
               <h2>Galéria</h2>
+              <span class="item-count" data-count-for="gallery"></span>
               <p class="hint">A főoldali galéria képei. Csak nyilvánosan elérhető képútvonalat adj meg.</p>
             </div>
             <button type="button" data-add="gallery">Sor hozzáadása</button>
@@ -600,6 +885,7 @@
           <div class="panel-head">
             <div>
               <h2>Árlista</h2>
+              <span class="item-count" data-count-for="prices"></span>
               <p class="hint">Az árakat lehetőleg 0-ra végződően add meg, például 14 000 Ft.</p>
             </div>
             <button type="button" data-add="price-group">Csoport hozzáadása</button>
@@ -647,6 +933,7 @@
           <div class="panel-head">
             <div>
               <h2>Előnyök</h2>
+              <span class="item-count" data-count-for="benefits"></span>
               <p class="hint">Rövid bizalmi üzenetek, amelyek segítik a döntést.</p>
             </div>
             <button type="button" data-add="benefit">Sor hozzáadása</button>
@@ -680,6 +967,7 @@
           <div class="panel-head">
             <div>
               <h2>Vélemények</h2>
+              <span class="item-count" data-count-for="testimonials"></span>
               <p class="hint">Rövid vendégvélemények, amelyek a főoldalon kártyaként jelennek meg.</p>
             </div>
             <button type="button" data-add="testimonial">Sor hozzáadása</button>
@@ -713,6 +1001,7 @@
           <div class="panel-head">
             <div>
               <h2>GYIK</h2>
+              <span class="item-count" data-count-for="faq"></span>
               <p class="hint">Gyakori kérdések és rövid, vendégeknek szóló válaszok.</p>
             </div>
             <button type="button" data-add="faq">Sor hozzáadása</button>
@@ -743,6 +1032,7 @@
         </section>
 
         <div class="save-bar" id="saveBar">
+          <span class="save-hint">Mentés után automatikusan készül biztonsági másolat.</span>
           <button type="submit">Mentés</button>
         </div>
       </form>
@@ -760,10 +1050,19 @@
           @else
             <div class="backup-list">
               @foreach ($backups as $backup)
-                <div class="backup-item">
-                  <div>
+                <div class="backup-item" tabindex="0" aria-label="{{ $backup['name'] }} mentés részletei">
+                  <div class="backup-meta">
                     <strong>{{ $backup['name'] }}</strong>
                     <span>{{ $backup['date'] }}</span>
+                    <span class="backup-help">Mutató fölé húzva: rövid változáslista</span>
+                  </div>
+                  <div class="backup-popover" role="tooltip">
+                    <strong>Fontos eltérések</strong>
+                    <ul>
+                      @foreach ($backup['summary'] as $summary)
+                        <li>{{ $summary }}</li>
+                      @endforeach
+                    </ul>
                   </div>
                   <form method="post" action="{{ route('admin.restore') }}" data-skip-dirty>
                     @csrf
@@ -859,14 +1158,26 @@
     </template>
 
     <script>
-      const sectionPicker = document.querySelector("#sectionPicker");
       const editorForm = document.querySelector("#contentForm");
       const saveBar = document.querySelector("#saveBar");
+      const dirtyPill = document.querySelector("#dirtyPill");
+      const currentSectionTitle = document.querySelector("#currentSectionTitle");
+      let currentSection = "services";
+      const sectionNames = {
+        services: "Szolgáltatások szerkesztése",
+        gallery: "Galéria szerkesztése",
+        prices: "Árlista szerkesztése",
+        benefits: "Előnyök szerkesztése",
+        testimonials: "Vélemények szerkesztése",
+        faq: "GYIK szerkesztése",
+        backups: "Legutóbbi mentések",
+      };
       let isDirty = false;
       let isSubmitting = false;
 
       const markDirty = () => {
         isDirty = true;
+        dirtyPill?.classList.add("is-visible");
       };
 
       editorForm?.addEventListener("input", markDirty);
@@ -890,14 +1201,72 @@
         event.returnValue = "";
       });
 
-      sectionPicker?.addEventListener("change", () => {
+      const activePanel = () => document.querySelector(`[data-section="${currentSection}"]`);
+
+      const updateCounts = () => {
+        const counts = {
+          services: document.querySelectorAll('[data-repeater="services"] > .row').length,
+          gallery: document.querySelectorAll('[data-repeater="gallery"] > .row').length,
+          prices: document.querySelectorAll(".price-row").length,
+          benefits: document.querySelectorAll('[data-repeater="benefits"] > .row').length,
+          testimonials: document.querySelectorAll('[data-repeater="testimonials"] > .row').length,
+          faq: document.querySelectorAll('[data-repeater="faq"] > .row').length,
+        };
+
+        Object.entries(counts).forEach(([section, count]) => {
+          const target = document.querySelector(`[data-count-for="${section}"]`);
+          if (target) {
+            target.textContent = `${count} sor`;
+          }
+        });
+      };
+
+      const labelRows = () => {
+        document.querySelectorAll('[data-repeater="services"] > .row').forEach((row, index) => row.dataset.rowLabel = `Szolgáltatás ${index + 1}`);
+        document.querySelectorAll('[data-repeater="gallery"] > .row').forEach((row, index) => row.dataset.rowLabel = `Galéria kép ${index + 1}`);
+        document.querySelectorAll('[data-repeater="benefits"] > .row').forEach((row, index) => row.dataset.rowLabel = `Előny ${index + 1}`);
+        document.querySelectorAll('[data-repeater="testimonials"] > .row').forEach((row, index) => row.dataset.rowLabel = `Vélemény ${index + 1}`);
+        document.querySelectorAll('[data-repeater="faq"] > .row').forEach((row, index) => row.dataset.rowLabel = `Kérdés ${index + 1}`);
+        document.querySelectorAll(".price-row").forEach((row, index) => row.dataset.rowLabel = `Árlista sor ${index + 1}`);
+      };
+
+      const refreshEditorUi = () => {
+        updateCounts();
+        labelRows();
+      };
+
+      const activateSection = (section) => {
+        if (!section || !sectionNames[section]) {
+          return;
+        }
+
+        currentSection = section;
+
         document.querySelectorAll("[data-section]").forEach((panel) => {
-          panel.classList.toggle("is-active", panel.dataset.section === sectionPicker.value);
+          panel.classList.toggle("is-active", panel.dataset.section === currentSection);
         });
 
-        if (saveBar) {
-          saveBar.hidden = sectionPicker.value === "backups";
+        document.querySelectorAll("[data-section-shortcut]").forEach((button) => {
+          const isActive = button.dataset.sectionShortcut === currentSection;
+          button.classList.toggle("is-active", isActive);
+          button.setAttribute("aria-pressed", String(isActive));
+        });
+
+        if (currentSectionTitle) {
+          currentSectionTitle.textContent = sectionNames[currentSection] || "Szerkesztés";
         }
+
+        if (saveBar) {
+          saveBar.hidden = currentSection === "backups";
+        }
+      };
+
+      document.querySelectorAll("[data-section-shortcut]").forEach((button) => {
+        button.setAttribute("aria-pressed", button.classList.contains("is-active") ? "true" : "false");
+        button.addEventListener("click", () => {
+          activateSection(button.dataset.sectionShortcut);
+          activePanel()?.scrollIntoView({ behavior: "smooth", block: "start" });
+        });
       });
 
       const nextIndex = (container, pattern) => {
@@ -922,29 +1291,36 @@
       };
 
       const addRow = (type, trigger) => {
+        let added = null;
+
         if (type === "service") {
           const container = document.querySelector('[data-repeater="services"]');
-          container.append(fragmentFromTemplate("#serviceTemplate", { __INDEX__: nextIndex(container, /content\[services]\[(\d+)]/) }));
+          added = fragmentFromTemplate("#serviceTemplate", { __INDEX__: nextIndex(container, /content\[services]\[(\d+)]/) });
+          container.append(added);
         }
 
         if (type === "benefit") {
           const container = document.querySelector('[data-repeater="benefits"]');
-          container.append(fragmentFromTemplate("#benefitTemplate", { __INDEX__: nextIndex(container, /content\[benefits]\[(\d+)]/) }));
+          added = fragmentFromTemplate("#benefitTemplate", { __INDEX__: nextIndex(container, /content\[benefits]\[(\d+)]/) });
+          container.append(added);
         }
 
         if (type === "gallery") {
           const container = document.querySelector('[data-repeater="gallery"]');
-          container.append(fragmentFromTemplate("#galleryTemplate", { __INDEX__: nextIndex(container, /content\[gallery]\[(\d+)]/) }));
+          added = fragmentFromTemplate("#galleryTemplate", { __INDEX__: nextIndex(container, /content\[gallery]\[(\d+)]/) });
+          container.append(added);
         }
 
         if (type === "testimonial") {
           const container = document.querySelector('[data-repeater="testimonials"]');
-          container.append(fragmentFromTemplate("#testimonialTemplate", { __INDEX__: nextIndex(container, /content\[testimonials]\[(\d+)]/) }));
+          added = fragmentFromTemplate("#testimonialTemplate", { __INDEX__: nextIndex(container, /content\[testimonials]\[(\d+)]/) });
+          container.append(added);
         }
 
         if (type === "faq") {
           const container = document.querySelector('[data-repeater="faq"]');
-          container.append(fragmentFromTemplate("#faqTemplate", { __INDEX__: nextIndex(container, /content\[faq]\[(\d+)]/) }));
+          added = fragmentFromTemplate("#faqTemplate", { __INDEX__: nextIndex(container, /content\[faq]\[(\d+)]/) });
+          container.append(added);
         }
 
         if (type === "price-group") {
@@ -953,6 +1329,7 @@
           const group = fragmentFromTemplate("#priceGroupTemplate", { __GROUP__: groupIndex });
           container.append(group);
           addRow("price-item", group.querySelector('[data-add="price-item"]'));
+          added = group;
         }
 
         if (type === "price-item") {
@@ -961,8 +1338,13 @@
           const groupIndex = groupInput.name.match(/content\[price_groups]\[(\d+)]/)?.[1] ?? 0;
           const container = group.querySelector('[data-repeater="price-items"]');
           const itemIndex = nextIndex(container, /items]\[(\d+)]/);
-          container.append(fragmentFromTemplate("#priceItemTemplate", { __GROUP__: groupIndex, __ITEM__: itemIndex }));
+          added = fragmentFromTemplate("#priceItemTemplate", { __GROUP__: groupIndex, __ITEM__: itemIndex });
+          container.append(added);
         }
+
+        refreshEditorUi();
+        added?.querySelector("input, textarea")?.focus();
+        added?.scrollIntoView({ behavior: "smooth", block: "center" });
       };
 
       document.addEventListener("click", (event) => {
@@ -975,15 +1357,25 @@
 
         const removeButton = event.target.closest("[data-remove]");
         if (removeButton) {
+          if (!confirm("Biztosan törlöd ezt a sort? Mentés után tűnik el végleg a weboldalról.")) {
+            return;
+          }
+
           removeButton.closest(".row, .price-row")?.remove();
           markDirty();
+          refreshEditorUi();
           return;
         }
 
         const removeGroupButton = event.target.closest("[data-remove-group]");
         if (removeGroupButton) {
+          if (!confirm("Biztosan törlöd ezt az egész árcsoportot? Mentés után tűnik el végleg a weboldalról.")) {
+            return;
+          }
+
           removeGroupButton.closest("[data-price-group]")?.remove();
           markDirty();
+          refreshEditorUi();
         }
       });
 
@@ -1106,6 +1498,9 @@
         const popover = button.parentElement.querySelector("[data-preview-popover]");
         popover.innerHTML = previewHtml(row);
       });
+
+      refreshEditorUi();
+      activateSection(currentSection);
     </script>
   </body>
 </html>

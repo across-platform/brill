@@ -1,32 +1,53 @@
 {
     "services": [
         {
-            "title": "2D volume",
-            "description": "Könnyedebb dúsítás, elegáns mindennapi viselethez.",
-            "price": "14 000 Ft",
+            "title": "Műszempilla építés UV-LED technológiával",
+            "description": "Szemformához és stílushoz igazított, tartós és kényelmes viselet a természetes vagy hangsúlyosabb tekintetért.",
+            "price": "14 000 Ft-tól",
             "image": "assets/services/2d-volume.png",
-            "alt": "2D volume szempilla szett közeli képe"
+            "alt": "Műszempilla építés közeli képe"
         },
         {
-            "title": "3D volume",
-            "description": "Látványosabb, mégis finom hatás azoknak, akik szeretik a hangsúlyt.",
-            "price": "16 000 Ft",
+            "title": "Szempilla lifting",
+            "description": "Saját pilláid elegáns ívelése természetes, ápolt hatással, épített szempilla nélkül.",
+            "price": "10 000 Ft-tól",
+            "image": "assets/services/classic.png",
+            "alt": "Természetes szempilla lifting hatás"
+        },
+        {
+            "title": "Szemöldök laminálás",
+            "description": "Rendezett, dúsabb hatású szemöldök, amely szépen keretezi az arcot és könnyen formázható marad.",
+            "price": "11 000 Ft-tól",
             "image": "assets/services/3d-volume.png",
-            "alt": "3D volume szempilla szett közeli képe"
+            "alt": "Szemöldök laminálás hangulatkép"
+        },
+        {
+            "title": "Szemöldök styling és festés",
+            "description": "Finom formaigazítás, szedés és festés a harmonikusabb, ápolt összhatásért.",
+            "price": "2 000 Ft-tól",
+            "image": "assets/hero-eye-photo.png",
+            "alt": "Szemöldök styling és festés hangulatkép"
+        },
+        {
+            "title": "AirBrush Brow System",
+            "description": "Modern, porlasztásos technológia soft powder, ombre vagy intenzívebb szemöldökhatáshoz.",
+            "price": "Ajánlatkérés alapján",
+            "image": "assets/intro.jpg",
+            "alt": "AirBrush Brow System szépségszalon hangulatkép"
         }
     ],
     "gallery": [
         {
             "image": "assets/services/2d-volume.png",
-            "alt": "Finom 2D styling közeli képe"
+            "alt": "Finom műszempilla styling közeli képe"
         },
         {
             "image": "assets/services/3d-volume.png",
-            "alt": "Elegáns volume eredmény"
+            "alt": "Elegáns volume műszempilla eredmény"
         },
         {
             "image": "assets/services/classic.png",
-            "alt": "Természetes hatású styling"
+            "alt": "Természetes hatású szempilla styling"
         }
     ],
     "price_groups": [
@@ -34,11 +55,11 @@
             "title": "Műszempilla",
             "items": [
                 {
-                    "name": "2D műszempilla építés",
+                    "name": "2D-3D hibrid műszempilla építés",
                     "price": "14 000 Ft"
                 },
                 {
-                    "name": "2D műszempilla töltés (21 napig)",
+                    "name": "2D-3D hibrid műszempilla töltés, 21 napig",
                     "price": "11 000 Ft"
                 },
                 {
@@ -46,7 +67,7 @@
                     "price": "16 000 Ft"
                 },
                 {
-                    "name": "3D-4D műszempilla töltés (21 napig)",
+                    "name": "3D-4D műszempilla töltés, 21 napig",
                     "price": "13 000 Ft"
                 },
                 {
@@ -54,7 +75,7 @@
                     "price": "18 000 Ft"
                 },
                 {
-                    "name": "5D-6D műszempilla töltés (21 napig)",
+                    "name": "5D-6D műszempilla töltés, 21 napig",
                     "price": "15 000 Ft"
                 },
                 {
@@ -108,7 +129,7 @@
                     "price": "2 500 Ft"
                 },
                 {
-                    "name": "Bajusz gyanta",
+                    "name": "Bajuszgyanta",
                     "price": "2 500 Ft"
                 }
             ]
@@ -116,56 +137,72 @@
     ],
     "benefits": [
         {
-            "title": "Egyedi styling",
-            "description": "A formát a szemformádhoz, stílusodhoz és természetes adottságaidhoz igazítom."
+            "title": "Személyre szabott tervezés",
+            "description": "A formát az arcodhoz, szemformádhoz és a hétköznapi stílusodhoz igazítom."
         },
         {
-            "title": "Prémium anyagok",
-            "description": "Gondosan válogatott, professzionális termékekkel dolgozom a tartós és kényelmes viseletért."
+            "title": "Prémium alapanyagok",
+            "description": "Professzionális termékekkel és modern technológiákkal dolgozom az igényes végeredményért."
         },
         {
-            "title": "Folyamatos fejlődés",
-            "description": "2018 óta képzem magam, hogy mindig naprakész technikákkal dolgozhassak."
+            "title": "Precíz, nyugodt munka",
+            "description": "A kezelés alatt figyelmet, türelmet és barátságos környezetet kapsz."
         },
         {
-            "title": "Nyugodt környezet",
-            "description": "Az itt töltött idő nem csak szépülés, hanem egy kis kikapcsolódás is."
+            "title": "Részletes konzultáció",
+            "description": "Átbeszéljük az elképzelésedet, az otthoni ápolást és a számodra ideális ritmust."
+        },
+        {
+            "title": "Modern technológiák",
+            "description": "UV-LED műszempilla építés és AirBrush Brow System is elérhető a szalonban."
+        },
+        {
+            "title": "Ápolási tanácsok",
+            "description": "A tartós, szép eredményhez minden fontos tudnivalót érthetően elmondok."
         }
     ],
     "testimonials": [
         {
-            "quote": "Gyönyörű, természetes hatás. Pont olyan lett, amilyet szerettem volna.",
-            "name": "Laura"
+            "quote": "Ide kerülhet egy valódi vendégvélemény, ha már rendelkezésre áll engedéllyel.",
+            "name": "Helyőrző vélemény"
         },
         {
-            "quote": "Nagyon precíz munka és kellemes hangulat. A pilláim hetekig szépek maradtak.",
-            "name": "Niki"
+            "quote": "Rövid, hiteles értékelés kerülhet ide a szolgáltatásról vagy a szalonélményről.",
+            "name": "Instagram üzenet"
         },
         {
-            "quote": "Eszti kedves, figyelmes, és minden alkalommal rám szabja a szettet.",
-            "name": "Dóri"
+            "quote": "A végleges szöveg legyen pontos, valós és a vendég hozzájárulásával megjelenítve.",
+            "name": "Visszatérő vendég"
         }
     ],
     "faq": [
         {
-            "question": "Fáj a szempillaépítés?",
-            "answer": "Nem, a kezelés fájdalommentes. A legtöbb vendég számára inkább pihentető élmény."
-        },
-        {
-            "question": "Mennyi ideig tart egy új építés?",
+            "question": "Mennyi ideig tart egy műszempilla építés?",
             "answer": "A választott technikától függően általában 2-3 órát vesz igénybe."
         },
         {
-            "question": "Mikor szükséges a töltés?",
-            "answer": "Általában 3 hetente ajánlott, hogy a szett szép és egyenletes maradjon."
+            "question": "Mikor ajánlott töltésre érkezni?",
+            "answer": "Általában 3-4 hetente ajánlott, de ez egyénfüggő. A töltési ár legfeljebb 21 napig érvényes."
         },
         {
-            "question": "Sminkelhetem a pilláimat?",
+            "question": "Érheti víz az UV-LED technológiával készült műszempillát?",
+            "answer": "Igen, a ragasztó azonnal megköt, ezért a pillát a kezelés után víz és gőz is érheti."
+        },
+        {
+            "question": "Kontaktlencsében érkezhetek?",
+            "answer": "Kérlek, a kezelés előtt vedd ki a kontaktlencsét, hogy kényelmes és biztonságos legyen a folyamat."
+        },
+        {
+            "question": "Hogyan készüljek a kezelésre?",
             "answer": "A tökéletes eredmény elérése érdekében kérlek, hogy smink nélkül érkezz."
         },
         {
-            "question": "Előfordulhat allergiás reakció?",
-            "answer": "Ritkán igen. Ez egyéni érzékenységtől függ, ezért minden fontos tudnivalót átbeszélünk a kezelés előtt."
+            "question": "Mikor nem végezhető el a kezelés?",
+            "answer": "Aktív szemkörnyéki irritáció, fertőzés vagy erős érzékenység esetén a kezelést későbbi időpontra halasztjuk."
+        },
+        {
+            "question": "Hogyan foglalhatok időpontot?",
+            "answer": "Instagram üzenetben vagy telefonon tudsz időpontot kérni."
         }
     ]
 }
